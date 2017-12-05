@@ -91,8 +91,20 @@ img {
 /*===================================
 =            Flex styles            =
 ===================================*/
+main {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    padding: 15px;
+
+    font-size: 30px;
+    line-height: 1.5;
+  }
+}
 
 .main-nav {
+  order: 1;
 
   li {
     width: 100px;
@@ -115,6 +127,19 @@ img {
     flex-direction: row-reverse;
     justify-content: center;
   }
+}
+
+.main-header {
+  background-color: yellowgreen;
+}
+
+.main-content {
+  background-color: skyblue;
+}
+
+.main-footer  {
+  order: 1;
+  background-color: mediumpurple;
 }
 
 /*=====  End of Flex styles  ======*/
